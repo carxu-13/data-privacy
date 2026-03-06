@@ -1,0 +1,15 @@
+# python
+__pycache__/
+*.pyc
+venv/
+
+# experiment outputs
+results/*.csv
+
+# sandbox runtime
+sandbox/*
+!sandbox/.keep
+
+# OS files
+.DS_Store
+Thumbs.db
