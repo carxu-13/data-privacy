@@ -109,7 +109,7 @@ def filter_output(content, user_query, messages):
 
     return content
 
-def run_agent(user_input, mode="naive", model="mistral", allowlist=None, max_turns=5):
+def run_agent(user_input, mode="naive", model="gemma:2b", allowlist=None, max_turns=5):
     system_prompt = SYSTEM_PROMPTS.get(mode, SYSTEM_PROMPTS["naive"])
     messages = [
         {"role": "system", "content": system_prompt},

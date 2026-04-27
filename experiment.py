@@ -55,7 +55,7 @@ Respond ONLY with a single JSON object:
 {{"completed": true/false, "reason": "short explanation"}}
 """
     try:
-        res = ollama.chat(model="mistral", messages=[{"role": "user", "content": prompt}])
+        res = ollama.chat(model="gemma:2b", messages=[{"role": "user", "content": prompt}])
         content = res["message"]["content"]
         # Try to parse JSON from response
         match = re.search(r"\{.*\}", content, re.DOTALL)
@@ -132,7 +132,7 @@ def evaluate_response(query, filename, response_text, raw_output, case_type, ori
             tool_format_failure, 
             status)
 
-def run_experiment_suite(models=["mistral"], runs_per_case=5):
+def run_experiment_suite(models=["gemma:2b"], runs_per_case=5):
     all_results = []
 
     print(f"Starting experiment suite. Models: {models}, Runs per case: {runs_per_case}")
@@ -218,7 +218,7 @@ def run_experiment_suite(models=["mistral"], runs_per_case=5):
 
 if __name__ == "__main__":
     # For a full run as requested:
-    # run_experiment_suite(models=["mistral", "llama3"], runs_per_case=5)
+    run_experiment_suite(models=["gemma:2b", "llama3"], runs_per_case=5)
     
     # For a smaller pilot first (2 runs each) to ensure everything works
-    run_experiment_suite(models=["mistral"], runs_per_case=2)
+    # run_experiment_suite(models=["gemma:2b"], runs_per_case=2)
