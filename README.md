@@ -33,7 +33,7 @@ The framework evaluates the following defense strategies:
 
 1.  Clone the repository:
     ```bash
-    git clone [repository-url]
+    git clone [github.com/carxu-13/data-privacy](https://github.com/carxu-13/data-privacy)
     cd data-privacy
     ```
 
@@ -52,8 +52,6 @@ The framework evaluates the following defense strategies:
     ```bash
     python setup_sandbox.py
     ```
-
-## Usage
 
 ### Running the Interactive Agent
 
