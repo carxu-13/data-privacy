@@ -33,7 +33,7 @@ The framework evaluates the following defense strategies:
 
 1.  Clone the repository:
     ```bash
-    git clone [github.com/carxu-13/data-privacy](https://github.com/carxu-13/data-privacy)
+    git clone github.com/carxu-13/data-privacy
     cd data-privacy
     ```
 
