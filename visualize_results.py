@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 import numpy as np
 
-RESULTS_FILE = "experiment_results.csv"
+RESULTS_FILE = "results/experiment_results.csv"
 
 def generate_report():
     if not os.path.exists(RESULTS_FILE):
@@ -94,8 +94,8 @@ def generate_report():
         ax2.tick_params(axis='x', rotation=45)
 
         plt.tight_layout()
-        plt.savefig("experiment_results.png")
-        print("\nVisualization saved to experiment_results.png")
+        plt.savefig("results/experiment_results.png")
+        print("\nVisualization saved to results/experiment_results.png")
         
         # Plot 3: Attack Type Breakdown
         plt.figure(figsize=(12, 7))
@@ -108,8 +108,8 @@ def generate_report():
         plt.legend(title="Attack Type", bbox_to_anchor=(1.05, 1), loc='upper left')
         plt.xticks(rotation=45)
         plt.tight_layout()
-        plt.savefig("attack_type_breakdown.png")
-        print("Attack type breakdown saved to attack_type_breakdown.png")
+        plt.savefig("results/attack_type_breakdown.png")
+        print("Attack type breakdown saved to results/attack_type_breakdown.png")
 
     except Exception as e:
         print(f"\nCould not generate plot: {e}")
